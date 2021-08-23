@@ -10,9 +10,9 @@ function init() {
     canvas.width = v2Frames.male_head_outline_1[0].length * punkBlockSize;
     canvas.height = v2Frames.male_head_outline_1.length * punkBlockSize;
 
-    //drawFace();
+    drawFace();
     //drawMale();
-    drawMale2();
+    //drawMale2();
     //drawFemale();
     //drawCustomMale();
     //drawClouds();
@@ -52,13 +52,13 @@ function drawFace() {
 
 function drawTearAndBlink() {
     blink();
-    var tear_counter = 0;
-    var tear_frames = [v2Frames.tear_0, v2Frames.tear_0, v2Frames.tear_0, v2Frames.tear_1, v2Frames.tear_2, v2Frames.tear_3, v2Frames.tear_4];
-    var tearInterval = setInterval(() => {
-        var i_tear = tear_counter % tear_frames.length;
-        drawAccessory(ctx, punkBlockSize, tear_frames[i_tear]);
-        tear_counter++;
-    }, 300);   
+    //var tear_counter = 0;
+    //var tear_frames = [v2Frames.tear_0, v2Frames.tear_0, v2Frames.tear_0, v2Frames.tear_1, v2Frames.tear_2, v2Frames.tear_3, v2Frames.tear_4];
+    //var tearInterval = setInterval(() => {
+    //    var i_tear = tear_counter % tear_frames.length;
+    //    drawAccessory(ctx, punkBlockSize, tear_frames[i_tear]);
+    //    tear_counter++;
+    //}, 300);   
 }
 
 function blink() {
