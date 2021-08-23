@@ -75,7 +75,7 @@ function blink() {
             drawAccessory(ctx, punkBlockSize, blink_frames[i_blink]);
             blink_counter ++;
         }, 150);
-    }, Math.random() * 10000);
+    }, Math.random() * 1500);
 }
 
 function drawCustomMale() {
