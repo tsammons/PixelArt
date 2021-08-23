@@ -19,34 +19,34 @@ function init() {
 }
 
 function drawFemale() {
-    drawHead(ctx, v2Frames.female_head_outline_1, "rgb(99,133,150)", "rgb(113,62,29)", null); //"rgb(255,20,147)"
-    drawAccessory(ctx, v2Frames.female_hair_1);
-    drawAccessory(ctx, v2Frames.sunglasses_2);
-    drawAccessory(ctx, v2Frames.female_mouth_and_nose_1);
-    drawAccessory(ctx, v2Frames.female_cig);
+    drawHead(ctx, punkBlockSize, v2Frames.female_head_outline_1, "rgb(99,133,150)", "rgb(113,62,29)", null); //"rgb(255,20,147)"
+    drawAccessory(ctx, punkBlockSize, v2Frames.female_hair_1);
+    drawAccessory(ctx, punkBlockSize, v2Frames.sunglasses_2);
+    drawAccessory(ctx, punkBlockSize, v2Frames.female_mouth_and_nose_1);
+    drawAccessory(ctx, punkBlockSize, v2Frames.female_cig);
     animateFemaleCig();
 }
 
 function drawMale() {
-    drawHead(ctx, v2Frames.male_head_outline_1, "rgb(99,133,150)", "rgb(234,218,217)", "rgb(166,110,44)");
-    drawAccessory(ctx, v2Frames.mouth_and_nose_1);
-    drawAccessory(ctx, v2Frames.sunglasses_1);
-    drawAccessory(ctx, v2Frames.headband_blue);
-    drawAccessory(ctx, v2Frames.ciggy_1);
+    drawHead(ctx, punkBlockSize, v2Frames.male_head_outline_1, "rgb(99,133,150)", "rgb(234,218,217)", "rgb(166,110,44)");
+    drawAccessory(ctx, punkBlockSize, v2Frames.mouth_and_nose_1);
+    drawAccessory(ctx, punkBlockSize, v2Frames.sunglasses_1);
+    drawAccessory(ctx, punkBlockSize, v2Frames.headband_blue);
+    drawAccessory(ctx, punkBlockSize, v2Frames.ciggy_1);
     animateCig();
 }
 
 function drawMale2() {
-    drawHead(ctx, v2Frames.male_head_outline_2, "rgb(99,133,150)", "rgb(174,139,96)", "rgb(166,110,44)");
-    drawAccessory(ctx, v2Frames.sunglasses_1);
-    drawAccessory(ctx, v2Frames.male_features_2);
-    //drawAccessory(ctx, v2Frames.headband_blue);
-    drawAccessory(ctx, v2Frames.ciggy_1);
+    drawHead(ctx, punkBlockSize, v2Frames.male_head_outline_2, "rgb(99,133,150)", "rgb(174,139,96)", "rgb(166,110,44)");
+    drawAccessory(ctx, punkBlockSize, v2Frames.sunglasses_1);
+    drawAccessory(ctx, punkBlockSize, v2Frames.male_features_2);
+    //drawAccessory(ctx, punkBlockSize, v2Frames.headband_blue);
+    drawAccessory(ctx, punkBlockSize, v2Frames.ciggy_1);
     animateCig();
 }
 
 function drawFace() {
-    drawHead(ctx, v2Frames.face, "rgb(99,133,150)", "rgb(174,139,96)", "rgb(166,110,44)");
+    drawHead(ctx, punkBlockSize, v2Frames.face, "rgb(99,133,150)", "rgb(174,139,96)", "rgb(166,110,44)");
     drawTearAndBlink();
 }
 
@@ -56,7 +56,7 @@ function drawTearAndBlink() {
     var tear_frames = [v2Frames.tear_0, v2Frames.tear_0, v2Frames.tear_0, v2Frames.tear_1, v2Frames.tear_2, v2Frames.tear_3, v2Frames.tear_4];
     var tearInterval = setInterval(() => {
         var i_tear = tear_counter % tear_frames.length;
-        drawAccessory(ctx, tear_frames[i_tear]);
+        drawAccessory(ctx, punkBlockSize, tear_frames[i_tear]);
         tear_counter++;
     }, 300);   
 }
@@ -72,18 +72,18 @@ function blink() {
             }
 
             var i_blink = blink_counter % blink_frames.length;
-            drawAccessory(ctx, blink_frames[i_blink]);
+            drawAccessory(ctx, punkBlockSize, blink_frames[i_blink]);
             blink_counter ++;
         }, 150);
     }, Math.random() * 10000);
 }
 
 function drawCustomMale() {
-    drawHead(ctx, v2Frames.customMale, "rgb(204,0,204)", "rgb(113,62,29)", "rgb(166,110,44)");
+    drawHead(ctx, punkBlockSize, v2Frames.customMale, "rgb(204,0,204)", "rgb(113,62,29)", "rgb(166,110,44)");
 }
 
 function drawClouds() {
-    drawAccessory(ctx, v2Frames.clouds_1);
+    drawAccessory(ctx, punkBlockSize, v2Frames.clouds_1);
 }
 
 function animateCig() {
@@ -92,7 +92,7 @@ function animateCig() {
 
     var cigInterval = setInterval(() => {
         var i = counter % cig_frames.length;
-        drawAccessory(ctx, cig_frames[i]);
+        drawAccessory(ctx, punkBlockSize, cig_frames[i]);
         counter++;
     }, 300);
 }
@@ -103,7 +103,7 @@ function animateFemaleCig() {
 
     var cigInterval = setInterval(() => {
         var i = counter % cig_frames.length;
-        drawAccessory(ctx, cig_frames[i]);
+        drawAccessory(ctx, punkBlockSize, cig_frames[i]);
         counter++;
     }, 300); 
 }
