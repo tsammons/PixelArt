@@ -10,9 +10,9 @@ function init() {
     canvas.width = v2Frames.male_head_outline_1[0].length * punkBlockSize;
     canvas.height = v2Frames.male_head_outline_1.length * punkBlockSize;
 
-    drawFace();
+    //drawFace();
     //drawMale();
-    //drawMale2();
+    drawMale2();
     //drawFemale();
     //drawCustomMale();
     //drawClouds();
